@@ -23,5 +23,13 @@ export default defineNuxtConfig({
       webhookSecret: '',
     },
   },
-  modules: ['@nuxt/ui']
+  modules: ['@nuxt/ui', '@formkit/auto-animate/nuxt', '@nuxtjs/plausible'],
+  ui: {
+    global: true,
+  },
+  plausible: {
+    domain: process.env.PLAUSIBLE_DOMAIN,
+    apiHost: process.env.PLUASIBLE_API_HOST ?? 'https://plausible.io',
+    trackLocalhost: true,
+  }
 })
