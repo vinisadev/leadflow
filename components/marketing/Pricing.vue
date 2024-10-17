@@ -14,7 +14,7 @@
         </p>
       </div>
       <div class="mt-12">
-        <!-- <PricingTable /> -->
+        <PricingTable />
       </div>
     </div>
   </section>

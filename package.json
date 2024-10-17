@@ -4,16 +4,35 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
+    "db:gen": "drizzle-kit generate:pg",
+    "db:push": "drizzle-kit push:pg",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "start": "node .output/server/index.mjs"
   },
   "dependencies": {
-    "@nuxt/ui": "^2.18.7"
+    "@lucia-auth/adapter-postgresql": "^2.0.2",
+    "@lucia-auth/oauth": "^3.5.1",
+    "@nuxt/ui": "^2.18.7",
+    "drizzle-orm": "^0.29.3",
+    "lucia": "^2.7.6",
+    "postgres": "^3.4.3",
+    "slugify": "^1.6.6",
+    "stripe": "^14.11.0",
+    "uid": "^2.0.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.8.0",
+    "@formkit/auto-animate": "^0.8.1",
+    "@iconify-json/devicon": "^1.2.4",
+    "@iconify-json/logos": "^1.2.3",
+    "@iconify-json/solar": "^1.2.1",
+    "@iconify-json/tabler": "^1.2.5",
+    "@nuxtjs/plausible": "latest",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.20.10",
     "eslint": "^9.12.0",
     "nuxt": "^3.13.0",
     "vue": "latest",
